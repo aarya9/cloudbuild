@@ -28,3 +28,4 @@ resources:
 - name: cdm-instance-two
   type: instances.py
   properties: *proper1
+
