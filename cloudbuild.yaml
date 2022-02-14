@@ -8,7 +8,7 @@ steps:
           'deployment-manager',
           'deployments',
           'create',
-          'newtwotwo1',
+          'newtwowww',
           '--config',
           'cmdconfig.yaml',
         ]
