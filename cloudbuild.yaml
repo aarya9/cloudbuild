@@ -7,7 +7,7 @@ steps:
     args: [
           'deployment-manager',
           'deployments',
-          'create',
+          'update',
           'newtwowww',
           '--config',
           'cmdconfig.yaml',
