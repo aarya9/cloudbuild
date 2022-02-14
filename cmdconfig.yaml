@@ -10,8 +10,8 @@ resources:
     diskTypes: pd-standard
     diskSizeGb: 10.0
     project: terraform-336010
-    network: appdev-envdev-vpc
-    subnetwork: appdevsubnet
+    network: old-vpc
+    subnetwork: old-vpc
     tags:
       items:
         - http
