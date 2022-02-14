@@ -5,12 +5,12 @@ steps:
       - 'https://source.developers.google.com/p/${_PROJECT}/r/${_REPO_NAME}'
   - name: 'gcr.io/cloud-builders/gcloud'
     args: [
-        'deployment-manager',
-        'deployments'.
-        'create',
-        'newdep',
-        '--config',
-        'config_cmd.yaml',
+          'deployment-manager',
+          'deployments',
+          'create',
+          'newdep',
+          '--config',
+          'config_cmd.yaml',
         ]
 options:
   substitutionOption: ALLOW_LOOSE
