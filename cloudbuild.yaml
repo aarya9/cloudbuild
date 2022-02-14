@@ -10,7 +10,7 @@ steps:
           'create',
           'newdep',
           '--config',
-          'config_cmd.yaml',
+          'cmdconfig.yaml',
         ]
 options:
   substitutionOption: ALLOW_LOOSE
