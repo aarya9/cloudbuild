@@ -5,13 +5,13 @@ resources:
 - name: cdm-instance-one
   type: instances.py
   properties: &proper1
-    zone: us-east4-a
+    zone: us-central1-a
     machineType: n1-custom-4-8192
     diskTypes: pd-standard
     diskSizeGb: 10.0
-    project: gcp-dc-sandbox-01
-    network: gcp-vpc-sndbx-dmz-01
-    subnetwork: ge4-snet-sndbx-dmz-pub-01
+    project: terraform-336010
+    network: appdev-envdev-vpc
+    subnetwork: appdevsubnet
     tags:
       items:
         - http
@@ -26,11 +26,5 @@ resources:
 
 
 - name: cdm-instance-two
-  type: instances.py
-  properties: *proper1
-  
-
-
-- name: cdm-instance-three
   type: instances.py
   properties: *proper1
