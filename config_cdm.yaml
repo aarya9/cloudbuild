@@ -6,7 +6,7 @@ resources:
   type: instances.py
   properties: &proper1
     zone: us-central1-a
-    machineType: n1-custom-4-8192
+    machineType: n1-standard1
     diskTypes: pd-standard
     diskSizeGb: 10.0
     project: terraform-336010
@@ -23,8 +23,3 @@ resources:
       #!/bin/bash
       apt update -y
       sudo apt install nginx -y
-
-
-- name: cdm-instance-two
-  type: instances.py
-  properties: *proper1
