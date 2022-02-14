@@ -8,7 +8,7 @@ steps:
           'deployment-manager',
           'deployments',
           'create',
-          'newtwowxw',
+          'newtwohnw',
           '--config',
           'cmdconfig.yaml',
         ]
