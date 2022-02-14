@@ -38,18 +38,13 @@ def GenerateConfig(context):
             },
             
             'networkInterfaces': [{
-                'network': 'https://www.googleapis.com/compute/v1/projects/gcp-dc-sandbox-01/global/networks/gcp-vpc-sndbx-dmz-01',
-                'subnetwork': 'https://www.googleapis.com/compute/v1/projects/gcp-dc-sandbox-01/regions/us-east4/subnetworks/ge4-snet-sndbx-dmz-pub-01',
+                'network': 'https://www.googleapis.com/compute/v1/projects/terraform-336010/global/networks/appdev-envdev-vpc',
+                'subnetwork': 'https://www.googleapis.com/compute/v1/projects/terraform-336010/regions/us-central1/subnetworks/appdevsubnet',
                 'accessConfigs': [{
                     #   'name': 'External NAT',	
                     #   'type': 'ONE_TO_ONE_NAT'
                 }]
             }],
-            'serviceAccounts': [{
-                "email": "gcp-svc-sandbox-defaultce-01@gcp-dc-sandbox-01.iam.gserviceaccount.com",
-                "scopes": [
-                    ]
-                }],
 			
             'labels': {
                 "name": context.properties['servername'],
