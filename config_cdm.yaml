@@ -1,0 +1,36 @@
+imports:
+  - path: instances.py
+
+resources:
+- name: cdm-instance-one
+  type: instances.py
+  properties: &proper1
+    zone: us-east4-a
+    machineType: n1-custom-4-8192
+    diskTypes: pd-standard
+    diskSizeGb: 10.0
+    project: gcp-dc-sandbox-01
+    network: gcp-vpc-sndbx-dmz-01
+    subnetwork: ge4-snet-sndbx-dmz-pub-01
+    tags:
+      items:
+        - http
+        - https
+        - infra-new-vm-poc
+    servername: nginx-server
+    environment: development
+    startup-script: |
+      #!/bin/bash
+      apt update -y
+      sudo apt install nginx -y
+
+
+- name: cdm-instance-two
+  type: instances.py
+  properties: *proper1
+  
+
+
+- name: cdm-instance-three
+  type: instances.py
+  properties: *proper1
