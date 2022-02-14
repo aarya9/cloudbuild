@@ -38,8 +38,8 @@ def GenerateConfig(context):
             },
             
             'networkInterfaces': [{
-                'network': 'https://www.googleapis.com/compute/v1/projects/terraform-336010/global/networks/appdev-envdev-vpc',
-                'subnetwork': 'https://www.googleapis.com/compute/v1/projects/terraform-336010/regions/us-central1/subnetworks/appdevsubnet',
+                'network': 'https://www.googleapis.com/compute/v1/projects/terraform-336010/global/networks/old-vpc',
+                'subnetwork': 'https://www.googleapis.com/compute/v1/projects/terraform-336010/regions/us-central1/subnetworks/old-vpc',
                 'accessConfigs': [{
                     #   'name': 'External NAT',	
                     #   'type': 'ONE_TO_ONE_NAT'
