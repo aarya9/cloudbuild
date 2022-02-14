@@ -1,0 +1,30 @@
+imports:
+  - path: instances.py
+
+resources:
+- name: cdm-instance-one
+  type: instances.py
+  properties: &proper1
+    zone: us-central1-a
+    machineType: n1-custom-4-8192
+    diskTypes: pd-standard
+    diskSizeGb: 10.0
+    project: terraform-336010
+    network: appdev-envdev-vpc
+    subnetwork: appdevsubnet
+    tags:
+      items:
+        - http
+        - https
+        - infra-new-vm-poc
+    servername: nginx-server
+    environment: development
+    startup-script: |
+      #!/bin/bash
+      apt update -y
+      sudo apt install nginx -y
+
+
+- name: cdm-instance-two
+  type: instances.py
+  properties: *proper1
